@@ -1,15 +1,14 @@
-import { useState, useEffect } from "react";
 import { getAllPlants } from "../../services/plantService.js";
+import { useState, useEffect } from "react";
 import { Plant } from "./Plant.js";
-import "./Plants.css";
 
 export const PlantList = () => {
   const [allPlants, setAllPlants] = useState([]);
 
   useEffect(() => {
-    getAllPlants().then((plantsArray) => {
-      setAllPlants(plantsArray);
-      console.log("plants are in!");
+    getAllPlants().then((plantArray) => {
+      setAllPlants(plantArray);
+      console.log("Seeds shall be sown!");
     });
   }, []);
 
@@ -17,7 +16,6 @@ export const PlantList = () => {
     <div className="plants-container">
       <h1>Welcome To PlantVault!</h1>
       <div>Compile your plants and watch them grow</div>
-
       <h2>All Plants</h2>
       <article className="plants">
         <ul>

@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { PlantUserViews } from "./PlantUserViews.js";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -10,5 +11,5 @@ export const ApplicationViews = () => {
     setCurrentUser(plantUserObject);
   }, []);
 
-  return <></>;
+  return <PlantUserViews currentUser={currentUser} />;
 };
