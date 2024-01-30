@@ -1,0 +1,162 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Captain Thunderstrike",
+      "email": "captain.thunder@example.com"
+    },
+    { "id": 2, "name": "Luna Stardust", "email": "luna.stardust@example.com" },
+    {
+      "id": 3,
+      "name": "Professor Quizzleton",
+      "email": "prof.quizzleton@example.com"
+    }
+  ],
+
+  "rooms": [
+    { "id": 1, "roomName": "Living Room", "lightLevel": "Medium" },
+    { "id": 2, "roomName": "Bedroom", "lightLevel": "Low" },
+    { "id": 3, "roomName": "Office", "lightLevel": "High" },
+    { "id": 4, "roomName": "Zen Garden", "lightLevel": "Low" },
+    { "id": 5, "roomName": "Observatory", "lightLevel": "High" },
+    { "id": 6, "roomName": "Secret Jungle Hideout", "lightLevel": "Medium" }
+  ],
+
+  "plants": [
+    {
+      "id": 1,
+      "userId": 1,
+      "roomId": 1,
+      "type": "Fern",
+      "waterLevel": "Regular",
+      "lightNeeded": "Medium",
+      "datePlanted": "2022-01-01"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "roomId": 2,
+      "type": "Snake Plant",
+      "waterLevel": "Low",
+      "lightNeeded": "Low",
+      "datePlanted": "2022-02-15"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "roomId": 3,
+      "type": "Spider Plant",
+      "waterLevel": "Regular",
+      "lightNeeded": "Medium",
+      "datePlanted": "2022-03-10"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "roomId": 1,
+      "type": "Peace Lily",
+      "waterLevel": "High",
+      "lightNeeded": "Low",
+      "datePlanted": "2022-04-05"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "roomId": 2,
+      "type": "ZZ Plant",
+      "waterLevel": "Low",
+      "lightNeeded": "Low",
+      "datePlanted": "2022-05-20"
+    },
+    {
+      "id": 6,
+      "userId": 3,
+      "roomId": 3,
+      "type": "Aloe Vera",
+      "waterLevel": "Low",
+      "lightNeeded": "High",
+      "datePlanted": "2022-06-15"
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "roomId": 1,
+      "type": "Rubber Plant",
+      "waterLevel": "Regular",
+      "lightNeeded": "Medium",
+      "datePlanted": "2022-07-10"
+    },
+    {
+      "id": 8,
+      "userId": 2,
+      "roomId": 2,
+      "type": "Snake Plant",
+      "waterLevel": "Low",
+      "lightNeeded": "Low",
+      "datePlanted": "2022-08-25"
+    },
+    {
+      "id": 9,
+      "userId": 3,
+      "roomId": 3,
+      "type": "Jade Plant",
+      "waterLevel": "Low",
+      "lightNeeded": "Medium",
+      "datePlanted": "2022-09-30"
+    },
+    {
+      "id": 10,
+      "userId": 1,
+      "roomId": 1,
+      "type": "Pothos",
+      "waterLevel": "Regular",
+      "lightNeeded": "Low",
+      "datePlanted": "2022-10-15"
+    },
+    {
+      "id": 11,
+      "userId": 2,
+      "roomId": 2,
+      "type": "Monstera",
+      "waterLevel": "Regular",
+      "lightNeeded": "Medium",
+      "datePlanted": "2022-11-20"
+    },
+    {
+      "id": 12,
+      "userId": 3,
+      "roomId": 3,
+      "type": "Snake Plant",
+      "waterLevel": "Low",
+      "lightNeeded": "Low",
+      "datePlanted": "2022-12-05"
+    },
+    {
+      "id": 13,
+      "userId": 1,
+      "roomId": 1,
+      "type": "Fiddle Leaf Fig",
+      "waterLevel": "Regular",
+      "lightNeeded": "High",
+      "datePlanted": "2023-01-10"
+    },
+    {
+      "id": 14,
+      "userId": 2,
+      "roomId": 2,
+      "type": "Spider Plant",
+      "waterLevel": "Regular",
+      "lightNeeded": "Medium",
+      "datePlanted": "2023-02-25"
+    },
+    {
+      "id": 15,
+      "userId": 3,
+      "roomId": 3,
+      "type": "Succulent",
+      "waterLevel": "Low",
+      "lightNeeded": "High",
+      "datePlanted": "2023-03-20"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+.plants {
+  display: flex;
+  flex-direction: column;
+}
+
+.plants-container {
+  margin: 1rem 5rem 0rem 5rem;
+}
+
+.plants-container > h2 {
+  margin-top: 0;
+}
+
+.plant {
+  background-color: var(--black);
+  border: 1px solid var(--outline);
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.plant > * {
+  padding: 0.5rem;
+}
+
+.plant-info {
+  color: var(--outline);
+  font-family: "Roboto", sans-serif;
+}
