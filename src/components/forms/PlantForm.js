@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getUser } from "../../services/userService.js";
 import { getPlantInfo, updatePlant } from "../../services/plantService.js";
 import { useNavigate, useParams } from "react-router-dom";
+import { getAllRooms } from "../../services/roomService.js";
 
 export const PlantForm = ({ currentUser }) => {
   const { plantId } = useParams();
@@ -19,12 +20,15 @@ export const PlantForm = ({ currentUser }) => {
         currentPlantInfo.room &&
         currentPlantInfo.room.roooms
       ) {
-        setRooms(Object.values(currentPlantInfo.room.rooms));
         setSelectedRoom(currentPlantInfo.room.roomName);
         setCurrentPlantInfo(currentPlantInfo);
       }
     });
   }, [plantId, currentUser]);
+
+  useEffect(() => {
+    getAllRooms().then(setRooms);
+  }, []);
 
   const handleRoomChange = (event) => {
     const stateCopy = [...rooms];
@@ -63,8 +67,8 @@ export const PlantForm = ({ currentUser }) => {
           >
             <option value="">Select Room</option>
             {rooms.map((room) => (
-              <option key={room} value={room}>
-                {room}
+              <option key={room.id} value={room}>
+                {room.roomName}
               </option>
             ))}
           </select>
