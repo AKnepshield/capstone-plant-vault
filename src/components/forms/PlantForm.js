@@ -8,7 +8,7 @@ export const PlantForm = ({ currentUser }) => {
   const [rooms, setRooms] = useState([]);
 
   const [selectedRoom, setSelectedRoom] = useState("");
-  const [currentPlantInfo, setCurrentPlantInfo] = useState(null);
+  const [currentPlantInfo, setCurrentPlantInfo] = useState("");
 
   const navigate = useNavigate();
 
@@ -27,7 +27,7 @@ export const PlantForm = ({ currentUser }) => {
   }, [plantId, currentUser]);
 
   const handleRoomChange = (event) => {
-    const stateCopy = { ...rooms };
+    const stateCopy = [...rooms];
     stateCopy[event.target.name] = event.target.value;
     setSelectedRoom(stateCopy);
   };

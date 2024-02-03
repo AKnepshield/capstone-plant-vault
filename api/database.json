@@ -61,11 +61,7 @@
     {
       "id": 2,
       "userId": 2,
-      "roomId": 2,
-      "type": "Snake Plant",
-      "waterLevel": "Low",
-      "lightNeeded": "Low",
-      "datePlanted": "2022-02-15"
+      "roomId": ""
     },
     {
       "id": 3,
