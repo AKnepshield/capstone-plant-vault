@@ -61,7 +61,7 @@
     {
       "id": 2,
       "userId": 2,
-      "roomId": "3",
+      "roomId": 3,
       "type": "Bird of Paradise",
       "waterLevel": "Regular",
       "lightNeeded": "High",
@@ -88,7 +88,7 @@
     {
       "id": 5,
       "userId": 2,
-      "roomId": "3",
+      "roomId": 3,
       "type": "Philodendron",
       "waterLevel": "Medium",
       "lightNeeded": "Low",
@@ -115,7 +115,7 @@
     {
       "id": 8,
       "userId": 2,
-      "roomId": "4",
+      "roomId": 4,
       "type": "Snake Plant",
       "waterLevel": "Low",
       "lightNeeded": "Low",
