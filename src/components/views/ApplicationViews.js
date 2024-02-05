@@ -3,7 +3,7 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import { UserNav } from "../nav/UserNav.js";
 import { Welcome } from "../welcome/Welcome.js";
 import { PlantList } from "../plants/PlantList.js";
-import { PlantForm } from "../forms/PlantForm.js";
+import { EditForm, PlantForm } from "../forms/EditForm.js";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -29,14 +29,14 @@ export const ApplicationViews = () => {
         }
       >
         <Route index element={<Welcome />} />
-        <Route
-          path="profile"
-          element={<PlantList currentUser={currentUser} />}
-        />
+        <Route path="profile">
+          <Route index element={<PlantList currentUser={currentUser} />} />
+          <Route path="add-plant" element={<></>} />
+        </Route>
 
         <Route
           path="plant/:plantId/edit"
-          element={<PlantForm currentUser={currentUser} />}
+          element={<EditForm currentUser={currentUser} />}
         />
       </Route>
     </Routes>

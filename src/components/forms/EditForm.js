@@ -7,7 +7,7 @@ import {
 import { useNavigate, useParams } from "react-router-dom";
 import { getAllRooms } from "../../services/roomService.js";
 
-export const PlantForm = ({ currentUser }) => {
+export const EditForm = ({ currentUser }) => {
   const { plantId } = useParams();
   const [rooms, setRooms] = useState([]);
   const [selectedRoom, setSelectedRoom] = useState("");
@@ -87,25 +87,6 @@ export const PlantForm = ({ currentUser }) => {
               );
             })}
           </select>
-          {/* <select
-            className="form-control"
-            value={selectedRoom}
-            onChange={(event) => handleRoomChange(parseInt(event.target.value))}
-            // {handleRoomChange}
-          >
-            <option value=""></option>
-            {rooms.map((room) =>
-              selectedRoom === room.roomName ? (
-                <option selected key={room.id} value={room.roomName}>
-                  {room.roomName}
-                </option>
-              ) : (
-                <option key={room.id} value={room.roomName}>
-                  {room.roomName}
-                </option>
-              )
-            )}
-          </select> */}
         </div>
       </fieldset>
 

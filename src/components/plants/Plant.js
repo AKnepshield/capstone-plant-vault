@@ -8,6 +8,7 @@ export const Plant = ({ plant }) => {
       <p>Room: {plant.room && plant.room.roomName}</p>
       <p>Water Level: {plant.waterLevel}</p>
       <p>Light Needed: {plant.lightNeeded}</p>
+      <p>Date Planted: {plant.datePlanted}</p>
 
       <div className="btn-container">
         <Link to={`/plant/${plant.id}/edit`}>
