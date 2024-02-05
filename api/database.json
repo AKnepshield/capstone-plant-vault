@@ -5,41 +5,67 @@
       "name": "Captain Thunderstrike",
       "email": "captain.thunder@example.com"
     },
-    { "id": 2, "name": "Luna Stardust", "email": "luna.stardust@example.com" },
+    {
+      "id": 2,
+      "name": "Luna Stardust",
+      "email": "luna.stardust@example.com"
+    },
     {
       "id": 3,
       "name": "Professor Quizzleton",
       "email": "prof.quizzleton@example.com"
     }
   ],
-
   "rooms": [
-    { "id": 1, "roomName": "Living Room", "lightLevel": "Medium" },
-    { "id": 2, "roomName": "Bedroom", "lightLevel": "Low" },
-    { "id": 3, "roomName": "Office", "lightLevel": "High" },
-    { "id": 4, "roomName": "Zen Garden", "lightLevel": "Low" },
-    { "id": 5, "roomName": "Observatory", "lightLevel": "High" },
-    { "id": 6, "roomName": "Secret Jungle Hideout", "lightLevel": "Medium" }
+    {
+      "id": 1,
+      "roomName": "Living Room",
+      "lightLevel": "Medium"
+    },
+    {
+      "id": 2,
+      "roomName": "Bedroom",
+      "lightLevel": "Low"
+    },
+    {
+      "id": 3,
+      "roomName": "Office",
+      "lightLevel": "High"
+    },
+    {
+      "id": 4,
+      "roomName": "Zen Garden",
+      "lightLevel": "Low"
+    },
+    {
+      "id": 5,
+      "roomName": "Observatory",
+      "lightLevel": "High"
+    },
+    {
+      "id": 6,
+      "roomName": "Secret Jungle Hideout",
+      "lightLevel": "Medium"
+    }
   ],
-
   "plants": [
     {
       "id": 1,
       "userId": 1,
       "roomId": 1,
       "type": "Fern",
-      "waterLevel": "Regular",
+      "waterLevel": "Medium",
       "lightNeeded": "Medium",
       "datePlanted": "2022-01-01"
     },
     {
       "id": 2,
       "userId": 2,
-      "roomId": 2,
-      "type": "Snake Plant",
-      "waterLevel": "Low",
-      "lightNeeded": "Low",
-      "datePlanted": "2022-02-15"
+      "roomId": 5,
+      "type": "Bird of Paradise",
+      "waterLevel": "Regular",
+      "lightNeeded": "High",
+      "datePlanted": "2022-01-01"
     },
     {
       "id": 3,
@@ -62,11 +88,11 @@
     {
       "id": 5,
       "userId": 2,
-      "roomId": 2,
-      "type": "ZZ Plant",
-      "waterLevel": "Low",
+      "roomId": 3,
+      "type": "Philodendron",
+      "waterLevel": "Medium",
       "lightNeeded": "Low",
-      "datePlanted": "2022-05-20"
+      "datePlanted": "2023-05-15"
     },
     {
       "id": 6,
@@ -81,7 +107,7 @@
       "id": 7,
       "userId": 1,
       "roomId": 1,
-      "type": "Rubber Plant",
+      "type": "Monstera",
       "waterLevel": "Regular",
       "lightNeeded": "Medium",
       "datePlanted": "2022-07-10"
@@ -89,7 +115,7 @@
     {
       "id": 8,
       "userId": 2,
-      "roomId": 2,
+      "roomId": 4,
       "type": "Snake Plant",
       "waterLevel": "Low",
       "lightNeeded": "Low",
@@ -108,17 +134,17 @@
       "id": 10,
       "userId": 1,
       "roomId": 1,
-      "type": "Pothos",
+      "type": "Succulent",
       "waterLevel": "Regular",
-      "lightNeeded": "Low",
+      "lightNeeded": "High",
       "datePlanted": "2022-10-15"
     },
     {
       "id": 11,
       "userId": 2,
       "roomId": 2,
-      "type": "Monstera",
-      "waterLevel": "Regular",
+      "type": "Money Tree",
+      "waterLevel": "High",
       "lightNeeded": "Medium",
       "datePlanted": "2022-11-20"
     },
@@ -126,37 +152,37 @@
       "id": 12,
       "userId": 3,
       "roomId": 3,
-      "type": "Snake Plant",
-      "waterLevel": "Low",
-      "lightNeeded": "Low",
+      "type": "Spider Plant",
+      "waterLevel": "Regular",
+      "lightNeeded": "Medium",
       "datePlanted": "2022-12-05"
     },
     {
       "id": 13,
       "userId": 1,
       "roomId": 1,
-      "type": "Fiddle Leaf Fig",
-      "waterLevel": "Regular",
-      "lightNeeded": "High",
+      "type": "Rubber Plant",
+      "waterLevel": "Medium",
+      "lightNeeded": "Low",
       "datePlanted": "2023-01-10"
     },
     {
       "id": 14,
       "userId": 2,
       "roomId": 2,
-      "type": "Spider Plant",
-      "waterLevel": "Regular",
+      "type": "Pothos",
+      "waterLevel": "Low",
       "lightNeeded": "Medium",
-      "datePlanted": "2023-02-25"
+      "datePlanted": "2023-02-15"
     },
     {
       "id": 15,
       "userId": 3,
       "roomId": 3,
-      "type": "Succulent",
-      "waterLevel": "Low",
+      "type": "Fiddle Leaf Fig",
+      "waterLevel": "High",
       "lightNeeded": "High",
-      "datePlanted": "2023-03-20"
+      "datePlanted": "2023-03-10"
     }
   ]
 }
