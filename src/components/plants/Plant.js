@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { deletePlant } from "../../services/plantService.js";
 
 export const Plant = ({ plant }) => {
   return (
@@ -8,10 +9,14 @@ export const Plant = ({ plant }) => {
       <p>Water Level: {plant.waterLevel}</p>
       <p>Light Needed: {plant.lightNeeded}</p>
 
-      <Link to={`/plant/${plant.id}/edit`}>
-        <button className="edit-plant-btn">Edit Plant</button>
-      </Link>
-      {/* ^ currentUser greyed out in dev tools */}
+      <div className="btn-container">
+        <Link to={`/plant/${plant.id}/edit`}>
+          <button className="edit-plant-btn">Edit Plant</button>
+        </Link>
+        <button className="delete-plant-btn" onClick={deletePlant}>
+          Delete Plant
+        </button>
+      </div>
     </div>
   );
 };

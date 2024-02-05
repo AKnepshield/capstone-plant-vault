@@ -61,7 +61,11 @@
     {
       "id": 2,
       "userId": 2,
-      "roomId": ""
+      "roomId": "5",
+      "type": "Bird of Paradise",
+      "waterLevel": "Regular",
+      "lightNeeded": "High",
+      "datePlanted": "2022-01-01"
     },
     {
       "id": 3,
@@ -84,11 +88,11 @@
     {
       "id": 5,
       "userId": 2,
-      "roomId": 2,
-      "type": "ZZ Plant",
-      "waterLevel": "Low",
+      "roomId": "3",
+      "type": "Philodendron",
+      "waterLevel": "Medium",
       "lightNeeded": "Low",
-      "datePlanted": "2022-05-20"
+      "datePlanted": "2023-05-15"
     },
     {
       "id": 6,
@@ -111,7 +115,7 @@
     {
       "id": 8,
       "userId": 2,
-      "roomId": 2,
+      "roomId": "4",
       "type": "Snake Plant",
       "waterLevel": "Low",
       "lightNeeded": "Low",

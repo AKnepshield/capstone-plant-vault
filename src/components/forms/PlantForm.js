@@ -1,39 +1,46 @@
 import { useEffect, useState } from "react";
-import { getUser } from "../../services/userService.js";
-import { getPlantInfo, updatePlant } from "../../services/plantService.js";
+import {
+  getPlantInfo,
+  updatePlant,
+  deletePlant,
+} from "../../services/plantService.js";
 import { useNavigate, useParams } from "react-router-dom";
 import { getAllRooms } from "../../services/roomService.js";
 
 export const PlantForm = ({ currentUser }) => {
   const { plantId } = useParams();
   const [rooms, setRooms] = useState([]);
-
   const [selectedRoom, setSelectedRoom] = useState("");
-  const [currentPlantInfo, setCurrentPlantInfo] = useState("");
+  const [currentPlantInfo, setCurrentPlantInfo] = useState({});
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    getPlantInfo(plantId).then((currentPlantInfo) => {
-      if (
-        currentPlantInfo &&
-        currentPlantInfo.room &&
-        currentPlantInfo.room.roooms
-      ) {
-        setSelectedRoom(currentPlantInfo.room.roomName);
-        setCurrentPlantInfo(currentPlantInfo);
-      }
+    getPlantInfo(plantId).then(setCurrentPlantInfo);
+  }, []);
+
+  useEffect(() => {
+    if (currentPlantInfo.id) {
+      setSelectedRoom(currentPlantInfo.room.roomName);
+    }
+  }, [currentPlantInfo]);
+
+  useEffect(() => {
+    getAllRooms().then((allRooms) => {
+      const filteredRooms = allRooms.filter(
+        (room) => room.lightLevel === currentPlantInfo.lightNeeded
+      );
+      setRooms(filteredRooms);
     });
-  }, [plantId, currentUser]);
+  }, [currentPlantInfo.lightNeeded]);
 
   useEffect(() => {
     getAllRooms().then(setRooms);
   }, []);
 
   const handleRoomChange = (event) => {
-    const stateCopy = [...rooms];
-    stateCopy[event.target.name] = event.target.value;
-    setSelectedRoom(stateCopy);
+    const selectedRoomId = event.target.value;
+    setSelectedRoom(selectedRoomId);
   };
 
   const handleSave = (event) => {
@@ -45,11 +52,17 @@ export const PlantForm = ({ currentUser }) => {
       roomId: selectedRoom,
       type: currentPlantInfo.type,
       waterLevel: currentPlantInfo.waterLevel,
-      lightNeeded: currentPlantInfo.selectedSunNeeded,
+      lightNeeded: currentPlantInfo.lightNeeded,
       datePlanted: currentPlantInfo.datePlanted,
     };
 
     updatePlant(editedPlant).then(() => {
+      navigate(`/profile`);
+    });
+  };
+
+  const handleDelete = () => {
+    deletePlant(plantId).then(() => {
       navigate(`/profile`);
     });
   };
@@ -65,13 +78,34 @@ export const PlantForm = ({ currentUser }) => {
             value={selectedRoom}
             onChange={handleRoomChange}
           >
-            <option value="">Select Room</option>
-            {rooms.map((room) => (
-              <option key={room.id} value={room}>
-                {room.roomName}
-              </option>
-            ))}
+            <option value="">Choose Room</option>
+            {rooms.map((room) => {
+              return (
+                <option value={room.id} key={room.id}>
+                  {room.roomName}
+                </option>
+              );
+            })}
           </select>
+          {/* <select
+            className="form-control"
+            value={selectedRoom}
+            onChange={(event) => handleRoomChange(parseInt(event.target.value))}
+            // {handleRoomChange}
+          >
+            <option value=""></option>
+            {rooms.map((room) =>
+              selectedRoom === room.roomName ? (
+                <option selected key={room.id} value={room.roomName}>
+                  {room.roomName}
+                </option>
+              ) : (
+                <option key={room.id} value={room.roomName}>
+                  {room.roomName}
+                </option>
+              )
+            )}
+          </select> */}
         </div>
       </fieldset>
 
