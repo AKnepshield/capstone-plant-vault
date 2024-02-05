@@ -3,7 +3,7 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import { UserNav } from "../nav/UserNav.js";
 import { Welcome } from "../welcome/Welcome.js";
 import { PlantList } from "../plants/PlantList.js";
-import { EditForm, PlantForm } from "../forms/EditForm.js";
+import { EditForm } from "../forms/EditForm.js";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});

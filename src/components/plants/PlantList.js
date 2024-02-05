@@ -6,10 +6,8 @@ export const PlantList = ({ currentUser }) => {
   const [allPlants, setAllPlants] = useState([]);
 
   useEffect(() => {
-    const userId = currentUser.id;
-
-    if (userId) {
-      getPlantsByUserId(userId).then((plantArray) => {
+    if (currentUser.id) {
+      getPlantsByUserId(currentUser.id).then((plantArray) => {
         setAllPlants(plantArray);
       });
     }

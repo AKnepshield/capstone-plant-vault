@@ -61,7 +61,7 @@
     {
       "id": 2,
       "userId": 2,
-      "roomId": 3,
+      "roomId": 5,
       "type": "Bird of Paradise",
       "waterLevel": "Regular",
       "lightNeeded": "High",
