@@ -9,10 +9,7 @@ export const UserNav = () => {
         <Link to="/profile">Profile</Link>
       </li>
       <li className="navbar-item">
-        <Link to="/add-plant">Add Plant</Link>
-      </li>
-      <li className="navbar-item">
-        <Link to="/rooms">Rooms</Link>
+        <Link to="/profile/add-plant">Add Plant</Link>
       </li>
       {localStorage.getItem("plant_user") ? (
         <li className="navbar-item navbar-logout">

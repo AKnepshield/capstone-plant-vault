@@ -10,7 +10,7 @@ import { getAllRooms } from "../../services/roomService.js";
 export const EditForm = ({ currentUser }) => {
   const { plantId } = useParams();
   const [rooms, setRooms] = useState([]);
-  const [selectedRoom, setSelectedRoom] = useState("");
+  const [selectedRoom, setSelectedRoom] = useState(0);
   const [currentPlantInfo, setCurrentPlantInfo] = useState({});
 
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ export const EditForm = ({ currentUser }) => {
 
   useEffect(() => {
     if (currentPlantInfo.id) {
-      setSelectedRoom(currentPlantInfo.room.roomName);
+      setSelectedRoom(currentPlantInfo.roomId);
     }
   }, [currentPlantInfo]);
 
@@ -39,7 +39,7 @@ export const EditForm = ({ currentUser }) => {
   }, []);
 
   const handleRoomChange = (event) => {
-    const selectedRoomId = event.target.value;
+    const selectedRoomId = parseInt(event.target.value);
     setSelectedRoom(selectedRoomId);
   };
 
@@ -49,7 +49,7 @@ export const EditForm = ({ currentUser }) => {
     const editedPlant = {
       id: plantId,
       userId: currentUser.id,
-      roomId: selectedRoom.id,
+      roomId: selectedRoom,
       type: currentPlantInfo.type,
       waterLevel: currentPlantInfo.waterLevel,
       lightNeeded: currentPlantInfo.lightNeeded,
@@ -78,7 +78,7 @@ export const EditForm = ({ currentUser }) => {
             value={selectedRoom}
             onChange={handleRoomChange}
           >
-            <option value="">Choose Room</option>
+            <option value="0">Choose Room</option>
             {rooms.map((room) => {
               return (
                 <option value={room.id} key={room.id}>
