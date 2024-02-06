@@ -12,7 +12,7 @@ export const getUser = (userId) => {
 
 export const getPlantsByUserId = (userId) => {
   return fetch(
-    `http://localhost:8088/plants?_expand=user&_expand=room&userId=${userId}`
+    `http://localhost:8088/plants?userId=${userId}&_expand=user&_expand=room`
   ).then((res) => res.json());
 };
 

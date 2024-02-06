@@ -61,12 +61,6 @@ export const EditForm = ({ currentUser }) => {
     });
   };
 
-  const handleDelete = () => {
-    deletePlant(plantId).then(() => {
-      navigate(`/profile`);
-    });
-  };
-
   return (
     <form className="edit" onSubmit={handleSave}>
       <h2>Edit Plant</h2>
