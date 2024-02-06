@@ -1,15 +1,20 @@
-import { getPlantsByUserId } from "../../services/plantService.js";
+import { getPlantsByUserId } from "../../services/userService.js";
 import { useState, useEffect } from "react";
 import { Plant } from "./Plant.js";
 
 export const PlantList = ({ currentUser }) => {
   const [allPlants, setAllPlants] = useState([]);
 
+  const fetchPlants = (currentUser) => {
+    getPlantsByUserId(currentUser?.id).then((userData) => {
+      const plantsArray = userData;
+      setAllPlants(plantsArray);
+    });
+  };
+
   useEffect(() => {
     if (currentUser.id) {
-      getPlantsByUserId(currentUser.id).then((plantArray) => {
-        setAllPlants(plantArray);
-      });
+      fetchPlants(currentUser);
     }
   }, [currentUser]);
 
@@ -21,9 +26,13 @@ export const PlantList = ({ currentUser }) => {
       <h2>All Plants</h2>
       <article className="plants">
         <ul>
-          {allPlants.map((plant) => (
+          {allPlants?.map((plant) => (
             <li key={plant.id}>
-              <Plant plant={plant} currentUser={currentUser} />
+              <Plant
+                plant={plant}
+                currentUser={currentUser}
+                fetchPlants={fetchPlants}
+              />
             </li>
           ))}
         </ul>

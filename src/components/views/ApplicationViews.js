@@ -4,6 +4,7 @@ import { UserNav } from "../nav/UserNav.js";
 import { Welcome } from "../welcome/Welcome.js";
 import { PlantList } from "../plants/PlantList.js";
 import { EditForm } from "../forms/EditForm.js";
+import { AddPlantForm } from "../forms/AddPlantForm.js";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -31,7 +32,10 @@ export const ApplicationViews = () => {
         <Route index element={<Welcome />} />
         <Route path="profile">
           <Route index element={<PlantList currentUser={currentUser} />} />
-          <Route path="add-plant" element={<></>} />
+          <Route
+            path="add-plant"
+            element={<AddPlantForm currentUser={currentUser} />}
+          />
         </Route>
 
         <Route

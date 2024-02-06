@@ -61,7 +61,7 @@
     {
       "id": 2,
       "userId": 2,
-      "roomId": 5,
+      "roomId": 3,
       "type": "Bird of Paradise",
       "waterLevel": "Regular",
       "lightNeeded": "High",
@@ -165,15 +165,6 @@
       "waterLevel": "Medium",
       "lightNeeded": "Low",
       "datePlanted": "2023-01-10"
-    },
-    {
-      "id": 14,
-      "userId": 2,
-      "roomId": 2,
-      "type": "Pothos",
-      "waterLevel": "Low",
-      "lightNeeded": "Medium",
-      "datePlanted": "2023-02-15"
     },
     {
       "id": 15,

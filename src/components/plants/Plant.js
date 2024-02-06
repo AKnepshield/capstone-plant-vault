@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { deletePlant } from "../../services/plantService.js";
 
-export const Plant = ({ plant }) => {
+export const Plant = ({ plant, fetchPlants, currentUser }) => {
+  const handleDelete = () => {
+    deletePlant(plant.id).then(() => {
+      fetchPlants(currentUser);
+    });
+  };
   return (
     <div className="plant-card">
       <h3>{plant.type}</h3>
@@ -14,7 +19,7 @@ export const Plant = ({ plant }) => {
         <Link to={`/plant/${plant.id}/edit`}>
           <button className="edit-plant-btn">Edit Plant</button>
         </Link>
-        <button className="delete-plant-btn" onClick={deletePlant}>
+        <button className="delete-plant-btn" onClick={handleDelete}>
           Delete Plant
         </button>
       </div>

@@ -8,10 +8,10 @@ export const getPlantInfo = (plantId) => {
   ).then((res) => res.json());
 };
 
-export const getPlantsByUserId = (userId) => {
-  return fetch(
-    `http://localhost:8088/plants?_expand=user&_expand=room&userId=${userId}`
-  ).then((res) => res.json());
+export const getUsersByUserId = (userId) => {
+  return fetch(`http://localhost:8088/users/${userId}?_embed=plants`).then(
+    (res) => res.json()
+  );
 };
 
 export const updatePlant = async (plantObj) => {
@@ -25,8 +25,18 @@ export const updatePlant = async (plantObj) => {
 };
 // updatePlant is not saving the updated information
 
-export const deletePlant = (plantId) => {
-  return fetch(`http://localhost:8088/plants/${plantId}`, {
+export const deletePlant = (id) => {
+  return fetch(`http://localhost:8088/plants/${id}`, {
     method: "DELETE",
   }).then((res) => res.json());
+};
+
+export const addPlant = (plant) => {
+  return fetch(`http://localhost:8088/plants`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(plant),
+  });
 };
