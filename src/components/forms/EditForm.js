@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  getPlantInfo,
-  updatePlant,
-  deletePlant,
-} from "../../services/plantService.js";
+import { getPlantInfo, updatePlant } from "../../services/plantService.js";
 import { useNavigate, useParams } from "react-router-dom";
 import { getAllRooms } from "../../services/roomService.js";
 
@@ -85,7 +81,11 @@ export const EditForm = ({ currentUser }) => {
       </fieldset>
 
       <div className="form-group">
-        <button className="form-btn" onClick={handleSave}>
+        <button
+          className="form-btn"
+          class="btn btn-outline-success"
+          onClick={handleSave}
+        >
           Save
         </button>
       </div>

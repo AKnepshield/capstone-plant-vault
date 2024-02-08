@@ -9,8 +9,6 @@ import { AddPlantForm } from "../forms/AddPlantForm.js";
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
 
-  // currentUser not being recognized in dev tools but is displaying on page
-
   useEffect(() => {
     const localPlantUser = localStorage.getItem("plant_user");
     const plantUserObject = JSON.parse(localPlantUser);

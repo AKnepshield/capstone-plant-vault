@@ -9,11 +9,14 @@ export const Plant = ({ plant, fetchPlants, currentUser }) => {
   };
   return (
     <div className="plant-card">
-      <h3>{plant.type}</h3>
-      <p>Room: {plant.room && plant.room.roomName}</p>
-      <p>Water Level: {plant.waterLevel}</p>
-      <p>Light Needed: {plant.lightNeeded}</p>
-      <p>Date Planted: {plant.datePlanted}</p>
+      <img src="/" className="card-img-top" alt="picture of plant" />
+      <div className="plant-card-body">
+        <h3>{plant.type}</h3>
+        <p>Room: {plant.room && plant.room.roomName}</p>
+        <p>Water Level: {plant.waterLevel}</p>
+        <p>Light Needed: {plant.lightNeeded}</p>
+        <p>Date Planted: {plant.datePlanted}</p>
+      </div>
 
       <div className="btn-container">
         <Link to={`/plant/${plant.id}/edit`}>
