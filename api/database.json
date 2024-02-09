@@ -63,7 +63,7 @@
       "userId": 2,
       "roomId": 3,
       "type": "Bird of Paradise",
-      "waterLevel": "Regular",
+      "waterLevel": "Medium",
       "lightNeeded": "High",
       "datePlanted": "2022-01-01"
     },
@@ -72,7 +72,7 @@
       "userId": 3,
       "roomId": 3,
       "type": "Spider Plant",
-      "waterLevel": "Regular",
+      "waterLevel": "Medium",
       "lightNeeded": "Medium",
       "datePlanted": "2022-03-10"
     },
@@ -108,7 +108,7 @@
       "userId": 1,
       "roomId": 1,
       "type": "Monstera",
-      "waterLevel": "Regular",
+      "waterLevel": "Medium",
       "lightNeeded": "Medium",
       "datePlanted": "2022-07-10"
     },
@@ -144,7 +144,7 @@
       "userId": 3,
       "roomId": 3,
       "type": "Spider Plant",
-      "waterLevel": "Regular",
+      "waterLevel": "Medium",
       "lightNeeded": "Medium",
       "datePlanted": "2022-12-05"
     },
