@@ -129,8 +129,9 @@ export const AddPlantForm = ({ currentUser }) => {
                   <div className="col">
                     <button
                       type="button"
-                      class="btn btn-outline-success"
+                      class="btn btn-outline-light"
                       onClick={handleAdd}
+                      style={{ float: "left" }}
                     >
                       Add Plant
                     </button>

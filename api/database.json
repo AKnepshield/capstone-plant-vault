@@ -52,7 +52,7 @@
     {
       "id": 1,
       "userId": 1,
-      "roomId": 6,
+      "roomId": 1,
       "type": "Fern",
       "waterLevel": "Medium",
       "lightNeeded": "Medium",
@@ -131,15 +131,6 @@
       "datePlanted": "2022-09-30"
     },
     {
-      "id": 10,
-      "userId": 1,
-      "roomId": 1,
-      "type": "Succulent",
-      "waterLevel": "Regular",
-      "lightNeeded": "High",
-      "datePlanted": "2022-10-15"
-    },
-    {
       "id": 11,
       "userId": 2,
       "roomId": 2,
@@ -176,24 +167,13 @@
       "datePlanted": "2024-02-06T18:32:47.195Z"
     },
     {
+      "id": 17,
       "userId": 1,
-      "roomId": 2,
-      "type": "Snake",
-      "image": "/images/Snake.jpg",
+      "roomId": 6,
+      "type": "Philodendron Xanadu",
       "waterLevel": "Low",
       "lightNeeded": "Medium",
-      "datePlanted": "2024-02-08",
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "roomId": 3,
-      "type": "Pothos",
-      "image": "/images/Pothos.jpg",
-      "waterLevel": "Low",
-      "lightNeeded": "High",
-      "datePlanted": "2024-02-08",
-      "id": 19
+      "datePlanted": "2024-02-09"
     }
   ]
 }
