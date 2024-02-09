@@ -1,16 +1,62 @@
-// import "./Welcome.css";
+import nicePic from "../../images/cover.webp";
+import birdOfImage from "../../images/BoP.jpg";
+import fiddleFigImage from "../../images/Fiddle-Leaf-Fig-1.jpg";
+import haworthiaImage from "../../images/haworthia2.jpg";
 
 export const Welcome = () => {
   return (
-    <div
-      className="welcome-container"
-      style={{ backgroundImage: `url(/images/cover.webp)` }}
-    >
-      <h1>
-        <span>Welcome To</span>
-        <span>The Plant Vault</span>
+    <div>
+      <h1 className="welcome-banner text-white text-center fs-1 fw-bold">
+        Welcome To PlantVault!"
       </h1>
-      <div className="plant-pics"></div>
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src={nicePic}
+              class="d-block w-100"
+              style={{ height: "auto" }}
+              alt="Plants in a house in the sun"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src={birdOfImage}
+              class="d-block w-100"
+              style={{ height: "auto" }}
+              alt="Bird Of Paradise"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src={fiddleFigImage}
+              class="d-block w-100"
+              style={{ height: "auto" }}
+              alt="Fiddle Leaf Fig"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src={haworthiaImage}
+              class="d-block w-100"
+              style={{ height: "auto" }}
+              alt="Succulent"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src={fiddleFigImage}
+              class="d-block w-100"
+              style={{ height: "auto" }}
+              alt="Fiddle Leaf Fig"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

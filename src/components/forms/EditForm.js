@@ -59,7 +59,9 @@ export const EditForm = ({ currentUser }) => {
 
   return (
     <form className="edit" onSubmit={handleSave}>
-      <h2>Edit Plant</h2>
+      <h2 style={{ textAlign: "center", fontSize: "24px", paddingTop: "20px" }}>
+        Edit Plant
+      </h2>
       <fieldset>
         <div className="form-group">
           <label>Room:</label>
@@ -83,8 +85,11 @@ export const EditForm = ({ currentUser }) => {
       <div className="form-group">
         <button
           className="form-btn"
-          class="btn btn-outline-success"
+          class="btn btn-outline-light"
           onClick={handleSave}
+          style={{
+            float: "left",
+          }}
         >
           Save
         </button>
