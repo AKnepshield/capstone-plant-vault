@@ -63,7 +63,7 @@
       "userId": 2,
       "roomId": 3,
       "type": "Bird of Paradise",
-      "waterLevel": "Regular",
+      "waterLevel": "Medium",
       "lightNeeded": "High",
       "datePlanted": "2022-01-01"
     },
@@ -72,7 +72,7 @@
       "userId": 3,
       "roomId": 3,
       "type": "Spider Plant",
-      "waterLevel": "Regular",
+      "waterLevel": "Medium",
       "lightNeeded": "Medium",
       "datePlanted": "2022-03-10"
     },
@@ -108,7 +108,7 @@
       "userId": 1,
       "roomId": 1,
       "type": "Monstera",
-      "waterLevel": "Regular",
+      "waterLevel": "Medium",
       "lightNeeded": "Medium",
       "datePlanted": "2022-07-10"
     },
@@ -144,7 +144,7 @@
       "userId": 3,
       "roomId": 3,
       "type": "Spider Plant",
-      "waterLevel": "Regular",
+      "waterLevel": "Medium",
       "lightNeeded": "Medium",
       "datePlanted": "2022-12-05"
     },
@@ -167,13 +167,53 @@
       "datePlanted": "2024-02-06T18:32:47.195Z"
     },
     {
-      "id": 17,
       "userId": 1,
-      "roomId": 6,
-      "type": "Philodendron Xanadu",
+      "roomId": 1,
+      "type": "Fiddle Fig",
+      "image": "/images/Fiddle Fig.jpg",
       "waterLevel": "Low",
       "lightNeeded": "Medium",
-      "datePlanted": "2024-02-09"
+      "datePlanted": "2024-02-09",
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "roomId": 2,
+      "type": "Snake",
+      "image": "/images/Snake.jpg",
+      "waterLevel": "High",
+      "lightNeeded": "Low",
+      "datePlanted": "2024-02-13",
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "roomId": 3,
+      "type": "Aloe",
+      "image": "/images/Aloe.jpg",
+      "waterLevel": "High",
+      "lightNeeded": "Low",
+      "datePlanted": "2024-02-14",
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "roomId": 2,
+      "type": "Snake",
+      "image": "/images/Snake.jpg",
+      "waterLevel": "High",
+      "lightNeeded": "High",
+      "datePlanted": "2024-02-14",
+      "id": 22
+    },
+    {
+      "id": 23,
+      "userId": 1,
+      "roomId": 5,
+      "type": "Aloe",
+      "waterLevel": "Medium",
+      "lightNeeded": "High",
+      "datePlanted": "2024-02-15"
     }
   ]
 }
