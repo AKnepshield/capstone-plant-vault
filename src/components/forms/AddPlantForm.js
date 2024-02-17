@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { addPlant } from "../../services/plantService.js";
 import { useNavigate } from "react-router-dom";
 import { getAllRooms } from "../../services/roomService.js";
@@ -34,6 +34,13 @@ export const AddPlantForm = ({ currentUser }) => {
     { id: 2, name: "Medium", value: "Medium" },
     { id: 3, name: "High", value: "High" },
   ];
+
+  const handleWaterLevel = (value) => {
+    setSelectedWaterLevel(value);
+  };
+  const handleLightNeeded = (value) => {
+    setSelectedLightNeeded(value);
+  };
 
   const navigate = useNavigate();
 
@@ -91,73 +98,60 @@ export const AddPlantForm = ({ currentUser }) => {
               >
                 Water Level
               </label>
+              <br />
               <div
                 className="btn-group"
                 role="group"
                 aria-label="Basic radio toggle button group"
               >
-                {waterLevelOptions.map((waterLevelOption, index) => (
-                  <>
-                    {" "}
-                    <input
-                      type="radio"
-                      name="waterLevelOptions"
-                      id={`input-${waterLevelOption.name}-${index}`}
-                      value={waterLevelOption.name}
-                      key={`input-${waterLevelOption.name}-${index}-key`}
-                      autoComplete="off"
-                      checked={selectedWaterLevel === waterLevelOption.value}
-                      onChange={(event) => {
-                        console.log(event);
-                        setSelectedWaterLevel(event.target.value);
+                {waterLevelOptions.map((waterLevelOption) => (
+                  <div>
+                    <button
+                      style={{
+                        background: "darkgreen",
+                        color: "white",
+                        boxShadow: "2px 4px 2px lightgreen",
                       }}
-                    />
-                    <label
-                      className="btn btn-outline-warning rounded-pill"
-                      key={`label-${waterLevelOption.name}-${index}-key`}
-                      id={`label-${waterLevelOption.name}-${index}`}
+                      type="button"
+                      className={`btn btn-outline-warning rounded-pill`}
+                      onClick={() => handleWaterLevel(waterLevelOption.value)}
                     >
                       {waterLevelOption.name}
-                    </label>
-                  </>
+                    </button>
+                  </div>
                 ))}
               </div>
             </div>
+            <br />
             <div>
               <label className="form-label" style={{ fontSize: "24px" }}>
                 Amount of sunlight needed
               </label>
+              <br />
               <div
                 className="btn-group"
                 role="group"
                 aria-label="Basic radio toggle button group"
               >
-                {lightNeededOptions.map((lightNeededOption, index) => (
-                  <>
-                    <input
-                      type="radio"
-                      className="btn-success"
-                      name={lightNeededOption.name}
-                      id={`input-${lightNeededOption.name}-${index}`}
-                      key={`input-${lightNeededOption.name}-${index}-key`}
-                      autoComplete="off"
-                      checked={selectedLightNeeded === lightNeededOption.value}
-                      onChange={() => {
-                        setSelectedLightNeeded(lightNeededOption.value);
+                {lightNeededOptions.map((lightNeededOption) => (
+                  <div>
+                    <button
+                      style={{
+                        background: "darkgreen",
+                        color: "white",
+                        boxShadow: "2px 4px 2px lightgreen",
                       }}
-                    />
-                    <label
-                      value={lightNeededOption.value}
-                      className="btn btn-outline-warning rounded-pill"
-                      key={`label-${lightNeededOption.name}-${index}-key`}
-                      id={`label-${lightNeededOption.name}-${index}`}
+                      type="button"
+                      className={`btn btn-outline-warning rounded-pill`}
+                      onClick={() => handleLightNeeded(lightNeededOption.value)}
                     >
                       {lightNeededOption.name}
-                    </label>
-                  </>
+                    </button>
+                  </div>
                 ))}
               </div>
             </div>
+            <br />
             <fieldset>
               <div className="form-group">
                 <label style={{ fontSize: "24px" }}>Room:</label>
@@ -184,9 +178,14 @@ export const AddPlantForm = ({ currentUser }) => {
                   <div className="col">
                     <button
                       type="button"
-                      className="btn btn-outline-light"
+                      className="btn btn-outline-warning rounded-pill"
                       onClick={handleAdd}
-                      style={{ float: "left" }}
+                      style={{
+                        float: "left",
+                        background: "darkgreen",
+                        color: "white",
+                        boxShadow: "2px 4px 2px lightgreen",
+                      }}
                     >
                       Add Plant
                     </button>
@@ -195,7 +194,7 @@ export const AddPlantForm = ({ currentUser }) => {
               </div>
             </fieldset>
           </form>
-          {plantAdded && <CustomAlert message="Plant Successully Added!" />}
+          {plantAdded && <CustomAlert message="Plant Successfully Added!" />}
         </div>
       </div>
     </div>
