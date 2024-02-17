@@ -197,16 +197,6 @@
       "id": 20
     },
     {
-      "userId": 1,
-      "roomId": 2,
-      "type": "Snake",
-      "image": "/images/Snake.jpg",
-      "waterLevel": "High",
-      "lightNeeded": "High",
-      "datePlanted": "2024-02-14",
-      "id": 22
-    },
-    {
       "id": 23,
       "userId": 1,
       "roomId": 5,
@@ -214,6 +204,16 @@
       "waterLevel": "Medium",
       "lightNeeded": "High",
       "datePlanted": "2024-02-15"
+    },
+    {
+      "userId": 1,
+      "roomId": 2,
+      "type": "Aloe",
+      "image": "/images/Aloe.jpg",
+      "waterLevel": "Low",
+      "lightNeeded": "Low",
+      "datePlanted": "2024-02-16",
+      "id": 24
     }
   ]
 }
