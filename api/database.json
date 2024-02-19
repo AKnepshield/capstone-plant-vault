@@ -187,16 +187,6 @@
       "id": 19
     },
     {
-      "userId": 1,
-      "roomId": 3,
-      "type": "Aloe",
-      "image": "/images/Aloe.jpg",
-      "waterLevel": "High",
-      "lightNeeded": "Low",
-      "datePlanted": "2024-02-14",
-      "id": 20
-    },
-    {
       "id": 23,
       "userId": 1,
       "roomId": 5,
@@ -214,6 +204,15 @@
       "lightNeeded": "Low",
       "datePlanted": "2024-02-16",
       "id": 24
+    },
+    {
+      "id": 25,
+      "userId": 1,
+      "roomId": 5,
+      "type": "Aloe",
+      "waterLevel": "Low",
+      "lightNeeded": "High",
+      "datePlanted": "2024-02-18"
     }
   ]
 }

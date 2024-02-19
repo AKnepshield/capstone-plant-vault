@@ -68,8 +68,8 @@ export const AddPlantForm = ({ currentUser }) => {
   };
 
   return (
-    <div className="container">
-      <div className="row justify-content-center align=items-center vh-100">
+    <div className="container mt-4">
+      <div className="row justify-content-center align-items-center vh-100">
         <div className="col-md-8">
           <form>
             <h1 style={{ fontSize: "24px" }}>Add Plant</h1>
@@ -104,22 +104,26 @@ export const AddPlantForm = ({ currentUser }) => {
                 role="group"
                 aria-label="Basic radio toggle button group"
               >
-                {waterLevelOptions.map((waterLevelOption) => (
-                  <div>
-                    <button
-                      style={{
-                        background: "darkgreen",
-                        color: "white",
-                        boxShadow: "2px 4px 2px lightgreen",
-                      }}
-                      type="button"
-                      className={`btn btn-outline-warning rounded-pill`}
-                      onClick={() => handleWaterLevel(waterLevelOption.value)}
-                    >
-                      {waterLevelOption.name}
-                    </button>
-                  </div>
-                ))}
+                {waterLevelOptions.map((waterLevelOption) => {
+                  const isSelected =
+                    selectedWaterLevel === waterLevelOption.value;
+                  return (
+                    <div>
+                      <button
+                        style={{
+                          background: isSelected ? "white " : "darkgreen",
+                          color: isSelected ? "green" : "yellow",
+                          boxShadow: "2px 4px 2px lightgreen",
+                        }}
+                        type="button"
+                        className={`btn btn-outline-warning rounded-pill`}
+                        onClick={() => handleWaterLevel(waterLevelOption.value)}
+                      >
+                        {waterLevelOption.name}
+                      </button>
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <br />
@@ -133,22 +137,29 @@ export const AddPlantForm = ({ currentUser }) => {
                 role="group"
                 aria-label="Basic radio toggle button group"
               >
-                {lightNeededOptions.map((lightNeededOption) => (
-                  <div>
-                    <button
-                      style={{
-                        background: "darkgreen",
-                        color: "white",
-                        boxShadow: "2px 4px 2px lightgreen",
-                      }}
-                      type="button"
-                      className={`btn btn-outline-warning rounded-pill`}
-                      onClick={() => handleLightNeeded(lightNeededOption.value)}
-                    >
-                      {lightNeededOption.name}
-                    </button>
-                  </div>
-                ))}
+                {lightNeededOptions.map((lightNeededOption) => {
+                  const isSelected =
+                    selectedLightNeeded === lightNeededOption.value;
+
+                  return (
+                    <div>
+                      <button
+                        style={{
+                          background: isSelected ? "white " : "darkgreen",
+                          color: isSelected ? "green" : "yellow",
+                          boxShadow: "2px 4px 2px lightgreen",
+                        }}
+                        type="button"
+                        className={`btn btn-outline-warning rounded-pill`}
+                        onClick={() =>
+                          handleLightNeeded(lightNeededOption.value)
+                        }
+                      >
+                        {lightNeededOption.name}
+                      </button>
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <br />
@@ -183,7 +194,7 @@ export const AddPlantForm = ({ currentUser }) => {
                       style={{
                         float: "left",
                         background: "darkgreen",
-                        color: "white",
+                        color: "yellow",
                         boxShadow: "2px 4px 2px lightgreen",
                       }}
                     >

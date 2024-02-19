@@ -13,6 +13,7 @@ export const Welcome = () => {
         id="carouselExampleSlidesOnly"
         class="carousel slide"
         data-bs-ride="carousel"
+        data-bs-interval="1000"
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
