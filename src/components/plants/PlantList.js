@@ -32,7 +32,10 @@ export const PlantList = ({ currentUser }) => {
         </div>
       </div>
 
-      <div className="row justify-content-center mt-4">
+      <div
+        className="row justify-content-center mt-4"
+        style={{ flexDirection: "row", flexWrap: "wrap" }}
+      >
         {allPlants?.map((plant) => (
           <li className="list-group-item col-md-3 mb-4" key={plant.id}>
             <Plant
