@@ -7,7 +7,7 @@ import { CustomAlert } from "../CustomAlert.js";
 export const AddPlantForm = ({ currentUser }) => {
   const [plant, setPlant] = useState({});
   const [rooms, setRooms] = useState([]);
-  const [newSelectedRoom, setNewSelectedRooom] = useState(0);
+  const [newSelectedRoom, setNewSelectedRoom] = useState(0);
   const [plantAdded, setPlantAdded] = useState(false);
   const [selectedWaterLevel, setSelectedWaterLevel] = useState("");
   const [selectedLightNeeded, setSelectedLightNeeded] = useState("");
@@ -20,7 +20,7 @@ export const AddPlantForm = ({ currentUser }) => {
 
   const handleRoomChange = (event) => {
     const selectedRoomId = parseInt(event.target.value);
-    setNewSelectedRooom(selectedRoomId);
+    setNewSelectedRoom(selectedRoomId);
   };
 
   const waterLevelOptions = [

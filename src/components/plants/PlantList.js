@@ -49,18 +49,3 @@ export const PlantList = ({ currentUser }) => {
     </div>
   );
 };
-
-{
-  /* <div className="row justify-content-center">
-        <div className="col-md-6">
-          <article
-            className="plants"
-            style={{
-              backgroundColor: "black",
-              padding: "8px",
-              borderRadius: "10px",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-            }}
-          > */
-}
-// </div>

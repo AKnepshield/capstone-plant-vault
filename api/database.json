@@ -124,7 +124,7 @@
     {
       "id": 9,
       "userId": 3,
-      "roomId": 3,
+      "roomId": 6,
       "type": "Jade Plant",
       "waterLevel": "Low",
       "lightNeeded": "Medium",
@@ -196,23 +196,23 @@
       "datePlanted": "2024-02-15"
     },
     {
-      "userId": 1,
-      "roomId": 2,
-      "type": "Aloe",
-      "image": "/images/Aloe.jpg",
-      "waterLevel": "Low",
-      "lightNeeded": "Low",
-      "datePlanted": "2024-02-16",
-      "id": 24
-    },
-    {
       "id": 25,
       "userId": 1,
-      "roomId": 5,
+      "roomId": 3,
       "type": "Aloe",
       "waterLevel": "Low",
       "lightNeeded": "High",
       "datePlanted": "2024-02-18"
+    },
+    {
+      "userId": 1,
+      "roomId": 3,
+      "type": "Aloe ",
+      "image": "/images/Aloe .jpg",
+      "waterLevel": "Low",
+      "lightNeeded": "High",
+      "datePlanted": "2024-02-19",
+      "id": 26
     }
   ]
 }
